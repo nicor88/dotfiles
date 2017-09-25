@@ -60,13 +60,11 @@ export PATH="/Users/ncorda/miniconda3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin
 # setup JAVA HOME
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/'
 
-export LC_ALL="en_US.UTF-8"
-export LANG="en_US.UTF-8"
-
 source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+# setup language environment
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -93,20 +91,12 @@ source $ZSH/oh-my-zsh.sh
 eval "$(rbenv init -)"
 
 # pythonprojects
-export PYTHONPATH='/Users/ncorda/Github-Babbel/piping.worker:/Users/ncorda/Github-nicor88/twitter-data:/Users/ncorda/Github-nicor88/marleyspoon-challenge:/Users/ncorda/Github-nicor88/8fit-etl:$PYTHONPATH'
+export PYTHONPATH='/Users/ncorda/github/python-project:$PYTHONPATH'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
-# just a test
-export TWITTER_KEYWORDS="Sardegna,Python"
+# development setup
 export ENV='dev'
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/ncorda/.nvm/versions/node/v6.11.2/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/ncorda/.nvm/versions/node/v6.11.2/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/ncorda/.nvm/versions/node/v6.11.2/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ncorda/.nvm/versions/node/v6.11.2/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
