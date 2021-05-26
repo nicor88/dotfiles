@@ -1,0 +1,14 @@
+[core]
+	excludesfile = /Users/xxxx/.gitignore_global
+	editor = /usr/bin/vim
+[pager]
+	branch = false
+[user]
+	email = 6278547+nicor88@users.noreply.github.com
+	name = nicor88
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[diff]
+	colorMoved = zebra

@@ -1,15 +1,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/ncorda/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"  #default theme
 ZSH_THEME="lukerandall"
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -53,13 +48,6 @@ ZSH_THEME="lukerandall"
 plugins=(git)
 
 # User configuration
-
-export PATH="/Users/ncorda/miniconda3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin/:$PATH"
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# setup JAVA HOME
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/'
-
 source $ZSH/oh-my-zsh.sh
 
 # setup language environment
@@ -91,7 +79,22 @@ export LANG="en_US.UTF-8"
 eval "$(rbenv init -)"
 
 # setup python projects in PYTHONPATH
-export PYTHONPATH='/Users/ncorda/github/python-project:$PYTHONPATH'
+# export PYTHONPATH='/Users/my_user/python-project:$PYTHONPATH'
 
-# development setup
-export ENV='dev'
+# go
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+# source env variables
+source $HOME/.env
+
+# git alias
+alias git_prune="git remote update origin --prune"
+alias gmain="git checkout main && git pull"
+alias gmaster="git checkout master && git pull"
+alias gcommit="git commit -m"
+alias gp="git push"
+alias gb="git branch"
+alias gc="git checkout"
+alias ga="git add ."
